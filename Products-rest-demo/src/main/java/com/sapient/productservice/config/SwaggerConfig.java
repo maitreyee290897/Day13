@@ -25,7 +25,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(getApiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.sapient.springdemo"))
+                .apis(RequestHandlerSelectors.basePackage("com.sapient.productservice"))
                 .paths(PathSelectors.any())
                 .build();
     }
