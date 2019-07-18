@@ -1,0 +1,40 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="man" class="com.pack.springdemo.Man">
+		<!-- <property name="name" value="Kiran"> </property> <property name="age" 
+			value="21"> </property> -->
+		<!-- constructor injection -->
+		<constructor-arg name="name" value="Kiran"></constructor-arg>
+		<constructor-arg name="age" value="21"></constructor-arg>
+		<constructor-arg name="addr" ref="m_addr"></constructor-arg>
+	</bean>
+
+
+	<bean id="m_addr" class="com.pack.springdemo.Adderss">
+		<property name="state" value="Karnataka"></property>
+		<property name="city" value="Bengaluru"></property>
+		<property name="pin" value="560100"></property>
+	</bean>
+
+
+	<!-- setter injection -->
+	<bean id="women" class="com.pack.springdemo.Women">
+		<property name="name" value="aa">
+		</property>
+		<property name="age" value="21">
+		</property>
+		<property name="addr" ref="w_addr">
+		</property>
+	</bean>
+<bean id="w_addr" class="com.pack.springdemo.Adderess">
+		<property name="state" value="Karnataka"></property>
+		<property name="city" value="Bengaluru"></property>
+		<property name="pin" value="560100"></property>
+	</bean>
+
+</beans>
